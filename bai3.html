@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+    let bai3 = [5, 3, 11, 2, 4, 7, 9, 45, 15, 35, 84, 35, 48, 16, 47, 51, 4, 6];
+    let c = 0;
+    let max = bai3[0];
+    for (let k = 0; k < bai3.length; k++) {
+        if (bai3[k] > max) {
+            max = bai3[k];
+        }
+    }
+    for (let i = 0; i < bai3.length; i++) {
+        if (bai3[i] === 2) {
+            c += bai3[i];
+        }
+        for (let j = 2; j <= max - 1; j++) {
+            if (bai3[i] % j === 0) {
+                break;
+            }
+            if (bai3[i] - 1 === j) {
+                c += bai3[i]
+            }
+        }
+    }
+    document.write("Tổng các số nguyên tố trong mảng bai3 là :" + " " + c);
+</script>
+</body>
+</html>

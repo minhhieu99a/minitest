@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<script>
+    let d = Number(prompt("Bạn muốn tính tổng các số nguyên tố nhỏ hơn bao nhiêu ?"));
+    let c = 0
+    for (let i = 2; i < d; i++) {
+        if (i === 2) {
+            c += i
+        }
+        for (let j = 2; j <= i - 1; j++) {
+            if (i % j === 0) {
+                break;
+            }
+            if (i - 1 === j) {
+                c += i
+            }
+        }
+    }
+    document.write("Tổng các số nguyên tố nhỏ hơn" + " " + d + " " + "là:" + " " + c);
+</script>
+</body>
+</html>
